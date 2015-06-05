@@ -32,7 +32,7 @@ class MemeCollectionViewController: UIViewController, UICollectionViewDataSource
         let meme = memes[indexPath.row]
         
         // Set the name and image
-        cell.memeImageView.image =  meme.image
+        cell.memeImageView.image =  meme.memeImage
         cell.memeImageView?.contentMode = UIViewContentMode.ScaleAspectFill
         return cell
 
