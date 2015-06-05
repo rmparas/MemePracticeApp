@@ -12,7 +12,7 @@
 	<dict>
 		<key>486E5C1565DFE3B69752B245763F5D65D93DC8C1</key>
 		<string>https://github.com/rmparas/Picture-Perfect-II.git</string>
-		<key>93D57E4DBF729D55365E4BF81FF756E523140D3A</key>
+		<key>647DD4B7C4F4CB20222BB84163EC0A21A1E578BD</key>
 		<string>https://github.com/rmparas/MemePracticeApp.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
@@ -21,7 +21,7 @@
 	<dict>
 		<key>486E5C1565DFE3B69752B245763F5D65D93DC8C1</key>
 		<string>../../..</string>
-		<key>93D57E4DBF729D55365E4BF81FF756E523140D3A</key>
+		<key>647DD4B7C4F4CB20222BB84163EC0A21A1E578BD</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -29,7 +29,7 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>93D57E4DBF729D55365E4BF81FF756E523140D3A</string>
+	<string>647DD4B7C4F4CB20222BB84163EC0A21A1E578BD</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -44,7 +44,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>93D57E4DBF729D55365E4BF81FF756E523140D3A</string>
+			<string>647DD4B7C4F4CB20222BB84163EC0A21A1E578BD</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MemePracticeApp</string>
 		</dict>
