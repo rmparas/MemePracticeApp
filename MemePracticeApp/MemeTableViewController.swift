@@ -14,13 +14,12 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem (
-            title: "Return",
-            style: UIBarButtonItemStyle.Plain,
-            target: self,
-            action: "startOver")
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .Add,
+            target: self,
+            action: "returnToViewController")
+
         let object = UIApplication.sharedApplication().delegate
         let appDelegate = object as! AppDelegate
         memes = appDelegate.memes
@@ -28,12 +27,11 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     
-    func startOver() {
+    func returnToViewController() {
         
-        if let navigationController = self.navigationController {
-            navigationController.popToRootViewControllerAnimated(true)
-            //navigationController.popToViewController(MemeTableViewController, animated: true)
-        }
+        tabBarController?.tabBar.hidden = true
+        let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("MainViewController") as! ViewController
+        navigationController!.pushViewController(detailController, animated: true)
     }
     
     

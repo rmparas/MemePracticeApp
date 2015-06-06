@@ -14,14 +14,12 @@ class MemeDetailViewController: UIViewController, UINavigationControllerDelegate
     
     @IBOutlet weak var memeImageView: UIImageView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         memeImageView.image =  meme?.memeImage
         tabBarController?.tabBar.hidden = true
     }
-    
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)

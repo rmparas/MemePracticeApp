@@ -24,10 +24,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     var memeImageTemp: UIImage!
     
-    //SAVE IF REVIEWER NOT HAPPY WITH JUST KEEPING "Sent Memes" ENABLED
-    //var memes: [Meme]!
-    //static var firstView = true
-    
     override func viewDidLoad() {
         super.viewDidLoad()
    
@@ -82,17 +78,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
          super.viewWillAppear(animated)
         
        subscribeToKeyboardNotifications()
- 
-//SAVE IF REVIEWER NOT HAPPY WITH JUST KEEPING "Sent Memes" ENABLED
-//        let object = UIApplication.sharedApplication().delegate
-//                let appDelegate = object as! AppDelegate
-//                memes = appDelegate.memes
-//        
-//
-//        if  ViewController.firstView == true && memes.count > 0  {
-//            ViewController.firstView = false
-//            self.showTableView()
-//        }
     }
     
     
@@ -115,8 +100,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     @IBAction func pickAnImage(sender: UIBarButtonItem) {
     
-        //SAVE IF REVIEWER NOT HAPPY WITH JUST KEEPING "Sent Memes" ENABLED
-        //ViewController.firstView = false
         setInitialScreenSettings()
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
@@ -127,8 +110,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     @IBAction func pickAnImageCamera(sender: UIBarButtonItem) {
         
-        //SAVE IF REVIEWER NOT HAPPY WITH JUST KEEPING "Sent Memes" ENABLED
-        //ViewController.firstView = false
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         pickerController.sourceType = UIImagePickerControllerSourceType.Camera
@@ -222,8 +203,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     func shareMeme() {
     
-        //SAVE IF REVIEWER NOT HAPPY WITH JUST KEEPING "Sent Memes" ENABLED
-        //ViewController.firstView = false
         memeImageTemp = generateMemedImage()
         let controller = UIActivityViewController(activityItems: [memeImageTemp], applicationActivities: nil)
         presentViewController(controller, animated: true, completion: nil)
@@ -253,8 +232,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
      func showTableView() {
         
-        //SAVE IF REVIEWER NOT HAPPY WITH JUST KEEPING "Sent Memes" ENABLED
-        //ViewController.firstView = false
         var controllerMeme: UITabBarController
         controllerMeme = self.storyboard?.instantiateViewControllerWithIdentifier("TabBarController") as! UITabBarController
         navigationController!.pushViewController(controllerMeme, animated: true)

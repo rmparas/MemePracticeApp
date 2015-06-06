@@ -20,14 +20,13 @@ class BottomFieldDelegate : NSObject, UITextFieldDelegate {
     }
     
     
-    
     func textFieldDidBeginEditing(textField: UITextField) {
 
           if textField.text == "-----------Bottom-----------" {
             textField.text = ""
         }
-        
     }
+    
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         

@@ -20,8 +20,12 @@ class CustomUITabBarController: UITabBarController, UIImagePickerControllerDeleg
             target: self,
             action: "returnToViewController")
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem (
+            title: "Return",
+            style: UIBarButtonItemStyle.Plain,
+            target: self,
+            action: "returnToSentMemes")
     }
-    
     
     
     func returnToViewController() {
@@ -29,6 +33,14 @@ class CustomUITabBarController: UITabBarController, UIImagePickerControllerDeleg
         let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("MainViewController") as! ViewController
         navigationController!.pushViewController(detailController, animated: true)
     }
+    
+    func returnToSentMemes() {
+        
+        let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("TabBarController") as! UITabBarController
+        navigationController!.pushViewController(detailController, animated: true)
+
+    }
+
 }
 
 //KEEP AROUND FOR EASY REFERENCE

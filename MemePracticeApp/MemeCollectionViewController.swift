@@ -15,9 +15,21 @@ class MemeCollectionViewController: UIViewController, UICollectionViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .Add,
+            target: self,
+            action: "returnToViewController")
+        
         let object = UIApplication.sharedApplication().delegate
         let appDelegate = object as! AppDelegate
         memes = appDelegate.memes
+    }
+
+    func returnToViewController() {
+        
+        tabBarController?.tabBar.hidden = true
+        let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("MainViewController") as! ViewController
+        navigationController!.pushViewController(detailController, animated: true)
     }
 
     
